@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Catálogo - Loja Infantil</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff7f9;
+      padding: 0;
+    }
+
+    header {
+      background-color: #ff69b4;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .filtros {
+      padding: 20px;
+      background-color: #ffe0ec;
+      text-align: center;
+    }
+
+    .filtros button {
+      margin: 5px;
+      padding: 10px 15px;
+      border: none;
+      background-color: #ff99c8;
+      color: white;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .filtros button:hover {
+      background-color: #ff69b4;
+    }
+
+    .produtos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .produto {
+      background-color: white;
+      border: 1px solid #ddd;
+      padding: 15px;
+      text-align: center;
+      border-radius: 5px;
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+    }
+
+    .produto img {
+      width: 100%;
+      max-width: 150px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .produto button {
+      padding: 8px 12px;
+      background-color: #ff69b4;
+      border: none;
+      color: white;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .produto button:hover {
+      background-color: #e0559d;
+    }
+
+    .carrinho {
+      background-color: #fff0f5;
+      padding: 20px;
+      border-top: 2px solid #ff69b4;
+    }
+
+    .carrinho ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .voltar {
+      display: inline-block;
+      margin: 20px;
+      text-decoration: none;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Catálogo de Produtos</h1>
+  </header>
+
+  <section class="filtros">
+    <strong>Filtrar por:</strong><br>
+    <button onclick="filtrar('todos')">Todos</button>
+    <button onclick="filtrar('menino')">Menino</button>
+    <button onclick="filtrar('menina')">Menina</button>
+    <button onclick="filtrar('bebe')">Bebê</button>
+  </section>
+
+  <section class="produtos" id="produtos">
+    <div class="produto menina">
+      <img src="https://via.placeholder.com/150/FFB6C1/000000?text=Vestido" alt="Vestido">
+      <h3>Vestido Florido</h3>
+      <p>R$ 59,90</p>
+      <button onclick="adicionarCarrinho('Vestido Florido')">Adicionar ao Carrinho</button>
+    </div>
+    <div class="produto menino">
+      <img src="https://via.placeholder.com/150/ADD8E6/000000?text=Camisa+e+Bermuda" alt="Camisa e Bermuda">
+      <h3>Camisa e Bermuda</h3>
+      <p>R$ 44,90</p>
+      <button onclick="adicionarCarrinho('Camisa e Bermuda')">Adicionar ao Carrinho</button>
+    </div>
+    <div class="produto bebe">
+      <img src="https://via.placeholder.com/150/FFE4E1/000000?text=Macacão+Bebê" alt="Macacão Bebê">
+      <h3>Macacão Bebê</h3>
+      <p>R$ 39,90</p>
+      <button onclick="adicionarCarrinho('Macacão Bebê')">Adicionar ao Carrinho</button>
+    </div>
+    <!-- Adicione mais produtos com classes apropriadas -->
+  </section>
+
+  <section class="carrinho">
+    <h2>Carrinho</h2>
+    <ul id="lista-carrinho">
+      <!-- Itens do carrinho aparecem aqui -->
+    </ul>
+  </section>
+
+  <a class="voltar" href="index.html">← Voltar para a página inicial</a>
+
+  <script>
+    function adicionarCarrinho(produto) {
+      const lista = document.getElementById("lista-carrinho");
+      const item = document.createElement("li");
+      item.textContent = produto;
+      lista.appendChild(item);
+    }
+
+    function filtrar(categoria) {
+      const produtos = document.querySelectorAll(".produto");
+      produtos.forEach(produto => {
+        if (categoria === 'todos' || produto.classList.contains(categoria)) {
+          produto.style.display = "block";
+        } else {
+          produto.style.display = "none";
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
