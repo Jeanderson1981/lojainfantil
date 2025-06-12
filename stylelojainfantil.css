@@ -1,0 +1,179 @@
+stylelojainfantil.css 
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+   
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #e0e8c8;
+    color: #333;
+  }
+  
+  header {
+    background-color: #82b7ef;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header h1 {
+    font-size: 24px;
+  }
+  header {
+    background-color: #86bcf5;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Para adaptar em telas menores */
+  }
+  
+  header h1 {
+    font-size: 24px;
+    margin-right: 20px;
+  }
+  
+  .linguagens {
+    display: flex;
+    gap: 10px;
+    background-color: #0056b3;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  
+  .linguagens span {
+    background-color: white;
+    color: #007BFF;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  nav a {
+    color: rgb(64, 63, 63);
+    text-decoration: none;
+    font-weight: 700;
+  }
+  
+  main {
+    padding: 40px 20px;
+  }
+  
+  .apresentacao {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .apresentacao img {
+    width: 200px;
+    border-radius: 10px;
+  }
+  
+  .texto h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  footer ul {
+    list-style: none;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #e2a3c3;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  .texto-justificado {
+    text-align: justify;
+  }
+    
+    /* Flexbox para o conteúdo da seção sobre */
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Para o texto ocupar espaço */
+.container p {
+  flex: 2;
+  margin: 0;
+}
+
+/* Para o link ficar ao lado */
+.container .botao {
+  flex: 1;
+  background-color: #f28ab2;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* Flexbox para os links do rodapé */
+footer .social-links {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+footer .social-links a {
+  text-decoration: none;
+  color: #333;
+}
+.btn-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .btn-container img {
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      width: 30px;
+      height: 30px;
+      z-index: 1;
+    }
+
+    .btn-container button {
+      padding: 10px 20px;
+      font-size: 16px;
+      position: relative;
+      z-index: 0;
+    }
